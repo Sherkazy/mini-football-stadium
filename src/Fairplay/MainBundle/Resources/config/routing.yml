@@ -1,0 +1,3 @@
+fairplay_main_homepage:
+    pattern:  /
+    defaults: { _controller: FairplayMainBundle:Main:index }
