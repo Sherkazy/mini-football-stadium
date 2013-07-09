@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ed0632aae535a3c7c45a7dfba1ec67cb",
+    "hash": "89757a261698184e2ec014dda3bf3a5e",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -1894,17 +1894,17 @@
         },
         {
             "name": "sonata-project/block-bundle",
-            "version": "dev-master",
+            "version": "2.2.3",
             "target-dir": "Sonata/BlockBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataBlockBundle.git",
-                "reference": "e6426fe53744b2745eebd5fc1e54cbd282fffad1"
+                "reference": "2.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/e6426fe53744b2745eebd5fc1e54cbd282fffad1",
-                "reference": "e6426fe53744b2745eebd5fc1e54cbd282fffad1",
+                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/2.2.3",
+                "reference": "2.2.3",
                 "shasum": ""
             },
             "require": {
@@ -1954,7 +1954,7 @@
                 "block",
                 "sonata"
             ],
-            "time": "2013-07-05 17:04:12"
+            "time": "2013-05-23 11:50:36"
         },
         {
             "name": "sonata-project/cache-bundle",
@@ -2602,12 +2602,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataNewsBundle.git",
-                "reference": "f9afdb70780f0168205de8496e2cb10b245f5005"
+                "reference": "c5740303952ea3d4201d6e7431caa8d93f69b31e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataNewsBundle/zipball/f9afdb70780f0168205de8496e2cb10b245f5005",
-                "reference": "f9afdb70780f0168205de8496e2cb10b245f5005",
+                "url": "https://api.github.com/repos/sonata-project/SonataNewsBundle/zipball/c5740303952ea3d4201d6e7431caa8d93f69b31e",
+                "reference": "c5740303952ea3d4201d6e7431caa8d93f69b31e",
                 "shasum": ""
             },
             "require": {
@@ -2663,7 +2663,7 @@
                 "post",
                 "sonata"
             ],
-            "time": "2013-06-23 13:42:22"
+            "time": "2013-07-09 09:26:13"
         },
         {
             "name": "sonata-project/notification-bundle",
@@ -2731,72 +2731,6 @@
                 "sonata"
             ],
             "time": "2013-06-25 15:39:46"
-        },
-        {
-            "name": "sonata-project/page-bundle",
-            "version": "dev-master",
-            "target-dir": "Sonata/PageBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/SonataPageBundle.git",
-                "reference": "d19d916301ccdaae97fc69bc898f3d00f4818067"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataPageBundle/zipball/d19d916301ccdaae97fc69bc898f3d00f4818067",
-                "reference": "d19d916301ccdaae97fc69bc898f3d00f4818067",
-                "shasum": ""
-            },
-            "require": {
-                "sonata-project/admin-bundle": ">=2.2.1",
-                "sonata-project/cache-bundle": "2.1.*",
-                "sonata-project/doctrine-extensions": "1.*",
-                "sonata-project/notification-bundle": "2.2.*",
-                "sonata-project/seo-bundle": "1.*",
-                "symfony-cmf/routing": "1.1.*@dev",
-                "symfony-cmf/routing-bundle": "1.1.*@dev",
-                "symfony/symfony": ">=2.2,<2.4-dev"
-            },
-            "require-dev": {
-                "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev"
-            },
-            "suggest": {
-                "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Sonata\\PageBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@sonata-project.org",
-                    "homepage": "http://sonata-project.org"
-                },
-                {
-                    "name": "Sonata Community",
-                    "homepage": "https://github.com/sonata-project/SonataPageBundle/contributors"
-                }
-            ],
-            "description": "Symfony SonataPageBundle",
-            "homepage": "http://sonata-project.org/bundles/page",
-            "keywords": [
-                "cms",
-                "page",
-                "sonata"
-            ],
-            "time": "2013-07-05 17:13:59"
         },
         {
             "name": "sonata-project/seo-bundle",
@@ -4036,11 +3970,9 @@
         "sonata-project/intl-bundle": 20,
         "sonata-project/doctrine-orm-admin-bundle": 20,
         "sonata-project/notification-bundle": 20,
-        "sonata-project/block-bundle": 20,
         "sonata-project/media-bundle": 20,
         "sonata-project/user-bundle": 20,
         "sonata-project/cache-bundle": 20,
-        "sonata-project/page-bundle": 20,
         "sonata-project/formatter-bundle": 20,
         "sonata-project/news-bundle": 20,
         "sonata-project/admin-bundle": 20,
