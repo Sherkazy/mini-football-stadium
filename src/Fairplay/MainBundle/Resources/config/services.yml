@@ -1,0 +1,7 @@
+parameters:
+#    fairplay_main.example.class: Fairplay\MainBundle\Example
+
+services:
+#    fairplay_main.example:
+#        class: %fairplay_main.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
