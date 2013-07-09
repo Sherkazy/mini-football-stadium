@@ -53,3 +53,7 @@
 .navigation_element > .footer_menu> a:hover, .navigation_element> a:active{
     color: #ffffff;
 }
+.footer_social{
+    float: left;
+    margin-top: 20px;
+}
