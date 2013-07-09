@@ -1,8 +1,55 @@
-body > #top_menu{
-    margin: 0 0;
-    height: 20px;
-    background-color: #7aba7b;
+/*Header*/
+#top_menu{
+    height: 68px;
+    top: 0;
+    left:0;
+    position: fixed;
+    width: 100%;
+    background-color: #333333;
 }
-body{
-  margin: 0 0;
+.top_menu_content{
+    width: 960px;
+    margin: 0 auto;
+    height: 100%;
+    color: #ffffff;
+}
+.top_navigation{
+    float: right;
+}
+.top_navigation > ul{
+    list-style-type: none;
+    padding: 5px 0 0;
+}
+.navigation_element{
+    text-decoration: none;
+    display: block;
+    float: left;
+}
+.navigation_element > a{
+    text-decoration: none;
+    color: #C6C6C6;
+    padding: 0 10px;
+
+}
+.navigation_element > a:hover, .navigation_element> a:active{
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/*Footer*/
+.footer{
+    height: 200px;
+    bottom: 0;
+    left:0;
+    position: fixed;
+    width: 100%;
+    background-color: #333333;
+    border-top: 3px #666666 solid;
+}
+.navigation_footer{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.navigation_element > .footer_menu> a:hover, .navigation_element> a:active{
+    color: #ffffff;
 }
