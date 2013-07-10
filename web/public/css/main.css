@@ -57,3 +57,9 @@ body{
     float: left;
     margin-top: 20px;
 }
+
+/*Content*/
+.content{
+    margin: 10px auto;
+    width: 960px;
+}

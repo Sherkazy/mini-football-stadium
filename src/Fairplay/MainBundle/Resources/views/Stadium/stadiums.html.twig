@@ -1,8 +1,18 @@
 {% extends '::base.html.twig' %}
 {% block content %}
     {% for stadium in stadiums %}
-        {{ stadium.name }}
-        {{ stadium.address }}
-        {{ stadium.description }}
+        <div class="stadium">
+            <div class="stadium_element">
+            {{ stadium.name }}
+                <br/>
+            {{ stadium.address }}
+            </div>
+            <div class="stadium_element">
+            {{ stadium.description }}
+            </div>
+            <div class="stadium_element">
+                {{ stadium.rating }}
+            </div>
+        </div>
     {% endfor %}
 {% endblock %}
