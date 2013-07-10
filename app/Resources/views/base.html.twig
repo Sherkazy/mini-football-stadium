@@ -14,7 +14,14 @@
     {%  include '_header.html.twig' %}
     <div class="search_background">
         <div class="search_bar">
-        {% block search %}{% endblock %}
+        {% block search %}
+            <div class="search_info">
+                Artık saha saha dolaşmana gerek yok.
+                İster telefonundan, ister bilgisayarından,
+                Sahasepeti.com 'a gir, sahayı seç, kaporanı öde, sahayı kapat!
+            </div>
+            {{ render(controller('FairplayMainBundle:Main:searchBar')) }}
+        {% endblock %}
         </div>
     </div>
     {% block body %}{% endblock %}

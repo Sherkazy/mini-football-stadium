@@ -1,3 +1,7 @@
 fairplay_main_homepage:
     pattern:  /
     defaults: { _controller: FairplayMainBundle:Main:index }
+
+fairplay_main_search:
+    pattern: /district/{id}/
+    defaults: { _controller: FairplayMainBundle:Stadium:search }

@@ -5,12 +5,12 @@ namespace Fairplay\MainBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * District
+ * Facility
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Fairplay\MainBundle\Entity\DistrictRepository")
+ * @ORM\Entity
  */
-class District
+class Facility
 {
     /**
      * @var integer
@@ -24,7 +24,7 @@ class District
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=50)
      */
     private $name;
 
@@ -43,7 +43,7 @@ class District
      * Set name
      *
      * @param string $name
-     * @return District
+     * @return facility
      */
     public function setName($name)
     {
@@ -60,10 +60,5 @@ class District
     public function getName()
     {
         return $this->name;
-    }
-
-    public function __toString()
-    {
-        return $this->getName();
     }
 }

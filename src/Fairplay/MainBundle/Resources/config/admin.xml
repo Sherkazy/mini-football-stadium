@@ -1,8 +1,8 @@
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="sonata.admin.tag" class="Fairplay\MainBundle\Admin\DistrictAdmin">
-            <tag name="sonata.admin" manager_type="orm" group="Districts" label="District" audit="false"/>
+        <service id="sonata.admin.district" class="Fairplay\MainBundle\Admin\DistrictAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Стадион" label="Районы" audit="false"/>
             <argument/>
             <argument>Fairplay\MainBundle\Entity\District</argument>
             <argument>SonataAdminBundle:CRUD</argument>
@@ -10,5 +10,25 @@
                 <argument>FairplayMainBundle</argument>
             </call>
         </service>
+        <service id="sonata.admin.facility" class="Fairplay\MainBundle\Admin\FacilityAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Стадион" label="Возможности" audit="false"/>
+            <argument/>
+            <argument>Fairplay\MainBundle\Entity\Facility</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+            <call method="setTranslationDomain">
+                <argument>FairplayMainBundle</argument>
+            </call>
+        </service>
+
+        <service id="sonata.admin.stadium" class="Fairplay\MainBundle\Admin\StadiumAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Стадион" label="Стадионы" audit="false"/>
+            <argument/>
+            <argument>Fairplay\MainBundle\Entity\Stadium</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+            <call method="setTranslationDomain">
+                <argument>FairplayMainBundle</argument>
+            </call>
+        </service>
+
     </services>
            </container>

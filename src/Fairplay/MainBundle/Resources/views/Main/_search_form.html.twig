@@ -1,8 +1,8 @@
 <div class="">
-<form method="post">
-<select class="search_select">
+<form method="post" action="{{ path('fairplay_main_search',{id:1}) }}">
+<select class="search_select" name="district">
     {% for district in districts %}
-    <option value="{{district.name}}">{{ district.name }}</option>
+    <option value="{{district.id}}">{{ district.name }}</option>
     {% endfor %}
 </select>
     <input class="submit_button" type="submit" value="Поиск"/>
