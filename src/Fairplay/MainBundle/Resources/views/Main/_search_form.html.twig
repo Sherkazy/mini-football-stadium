@@ -1,0 +1,10 @@
+<div class="">
+<form method="post">
+<select class="search_select">
+    {% for district in districts %}
+    <option value="{{district.name}}">{{ district.name }}</option>
+    {% endfor %}
+</select>
+    <input class="submit_button" type="submit" value="Поиск"/>
+</form>
+</div>

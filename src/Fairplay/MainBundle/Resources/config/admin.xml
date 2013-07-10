@@ -1,0 +1,14 @@
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="sonata.admin.tag" class="Fairplay\MainBundle\Admin\DistrictAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Districts" label="District" audit="false"/>
+            <argument/>
+            <argument>Fairplay\MainBundle\Entity\District</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+            <call method="setTranslationDomain">
+                <argument>FairplayMainBundle</argument>
+            </call>
+        </service>
+    </services>
+           </container>

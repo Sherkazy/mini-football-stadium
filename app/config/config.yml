@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: fos_user.yml }
+    - { resource: @FairplayMainBundle/Resources/config/admin.xml}
 
     # Sonata Bundles
     - { resource: sonata/sonata_admin.yml }

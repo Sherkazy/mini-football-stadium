@@ -5,13 +5,18 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
             <link  href="{{ asset('public/css/main.css') }}" rel="stylesheet"/>
+            <link href="{{ asset('bundles/fairplaymain/css/main_bundle.css') }}" rel="stylesheet"/>
         {% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
 
     {%  include '_header.html.twig' %}
-
+    <div class="search_background">
+        <div class="search_bar">
+        {% block search %}{% endblock %}
+        </div>
+    </div>
     {% block body %}{% endblock %}
         {% block content %}{% endblock %}
 

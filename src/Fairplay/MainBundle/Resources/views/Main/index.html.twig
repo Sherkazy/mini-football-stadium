@@ -1,4 +1,9 @@
 {% extends '::base.html.twig' %}
-{% block body %}
-Hello home page
+{% block search %}
+    <div class="search_info">
+        Artık saha saha dolaşmana gerek yok.
+        İster telefonundan, ister bilgisayarından,
+        Sahasepeti.com 'a gir, sahayı seç, kaporanı öde, sahayı kapat!
+    </div>
+    {{ render(controller('FairplayMainBundle:Main:search')) }}
 {% endblock %}

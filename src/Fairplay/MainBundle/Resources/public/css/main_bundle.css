@@ -1,0 +1,28 @@
+.search_bar{
+    margin: 0 auto;
+    width: 960px;
+    padding: 20px;
+}
+.search_background{
+    background-color: #5ada31;
+}
+.submit_button{
+    border: 2px solid #00ff00;
+    border-radius: 3px 3px 3px 3px;
+    height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.search_info{
+    color: white;
+    font-size: 24px;
+    width: 400px;
+    margin:10px 10px 10px 0;
+}
+.search_select{
+    width: 150px;
+    margin:0;
+    padding: 0;
+    height: 25px;
+    border: 2px solid #00ff00;
+}
