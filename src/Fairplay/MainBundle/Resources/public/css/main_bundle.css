@@ -4,7 +4,7 @@
     padding: 20px;
 }
 .search_background{
-    background-color: #5ada31;
+    background-image: url("../img/football_field.jpg");
 }
 .submit_button{
     border: 2px solid #00ff00;
@@ -32,16 +32,16 @@
 
 .stadium{
     width: 300px;
-    background-color: #808080;
+    height: 150px;
     float: left;
     margin: 10px;
-    height: 100px;
-    overflow: hidden;
+    background-image: url('../img/stadium_element.jpg');
 
 }
 .stadium_element{
-    width: 148px;
-    height: 50px;
     float: left;
+    height: 46px;
+    margin: 2px;
     overflow: hidden;
+    width: 146px;
 }

@@ -8,10 +8,15 @@
             {{ stadium.address }}
             </div>
             <div class="stadium_element">
-            {{ stadium.description }}
+                {{ stadium.amount}} oy ile, 5 üzerinden {{ stadium.score }} puan.
             </div>
             <div class="stadium_element">
-                {{ stadium.rating }}
+                {{ stadium.district.name }}
+            </div>
+            <div class="stadium_element">
+                {% for facility in stadium.facilities %}
+                    {{ facility.name }},
+                    {% endfor %}
             </div>
         </div>
     {% endfor %}

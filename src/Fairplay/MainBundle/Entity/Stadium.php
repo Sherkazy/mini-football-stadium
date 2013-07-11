@@ -2,6 +2,7 @@
 
 namespace Fairplay\MainBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -50,11 +51,34 @@ class Stadium
     private $district;
 
     /**
-     * @var Rating
-     * @ORM\OneToOne(targetEntity="Rating")
-     * @ORM\JoinColumn(name="rating_id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="Facility")
+     * @ORM\JoinTable(name="stadium_facilities",
+     *      joinColumns={@ORM\JoinColumn(name="stadium_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="facility_id", referencedColumnName="id")}
+     *      )
      */
-    private $rating;
+    private $facilities;
+
+    public function __construct() {
+        $this->facilities = new ArrayCollection();
+        $this->setAmount(0);
+        $this->setScore(0);
+    }
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="amount", type="integer")
+     */
+    private $amount;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="score", type="decimal")
+     */
+    private $score;
+
     /**
      * Get id
      *
@@ -157,26 +181,83 @@ class Stadium
         return $this->district;
     }
 
+
     /**
-     * Set rating
+     * Add facilities
      *
-     * @param \Fairplay\MainBundle\Entity\Rating $rating
+     * @param \Fairplay\MainBundle\Entity\Facility $facilities
      * @return Stadium
      */
-    public function setRating(\Fairplay\MainBundle\Entity\Rating $rating = null)
+    public function addFacility(\Fairplay\MainBundle\Entity\Facility $facilities)
     {
-        $this->rating = $rating;
+        $this->facilities[] = $facilities;
     
         return $this;
     }
 
     /**
-     * Get rating
+     * Remove facilities
      *
-     * @return \Fairplay\MainBundle\Entity\Rating 
+     * @param \Fairplay\MainBundle\Entity\Facility $facilities
      */
-    public function getRating()
+    public function removeFacility(\Fairplay\MainBundle\Entity\Facility $facilities)
     {
-        return $this->rating;
+        $this->facilities->removeElement($facilities);
+    }
+
+    /**
+     * Get facilities
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getFacilities()
+    {
+        return $this->facilities;
+    }
+
+    /**
+     * Set amount
+     *
+     * @param integer $amount
+     * @return Stadium
+     */
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
+    
+        return $this;
+    }
+
+    /**
+     * Get amount
+     *
+     * @return integer 
+     */
+    public function getAmount()
+    {
+        return $this->amount;
+    }
+
+    /**
+     * Set score
+     *
+     * @param float $score
+     * @return Stadium
+     */
+    public function setScore($score)
+    {
+        $this->score = $score;
+    
+        return $this;
+    }
+
+    /**
+     * Get score
+     *
+     * @return float 
+     */
+    public function getScore()
+    {
+        return $this->score;
     }
 }
