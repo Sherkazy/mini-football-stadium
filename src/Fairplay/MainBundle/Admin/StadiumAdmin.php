@@ -18,14 +18,20 @@ class StadiumAdmin extends Admin
         $formMapper->add('name')
             ->add('description')
             ->add('district')
-            ->add('address');
+            ->add('address')
+            ->add('facilities','sonata_type_model',array( 'by_reference' => false,
+                'multiple' => true,
+                'expanded' => true,));
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper->addIdentifier('name')
             ->add('district')
-            ->add('rating')
-            ->add('address');
+            ->add('score')
+            ->add('address')
+            ->add('facilities','sonata_type_model',array( 'by_reference' => false,
+                'multiple' => true,
+                'expanded' => true,));
     }
 }
