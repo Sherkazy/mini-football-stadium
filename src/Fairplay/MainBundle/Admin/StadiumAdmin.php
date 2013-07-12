@@ -10,6 +10,7 @@ namespace Fairplay\MainBundle\Admin;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Show\ShowMapper;
 
 class StadiumAdmin extends Admin
 {
@@ -19,6 +20,7 @@ class StadiumAdmin extends Admin
             ->add('description')
             ->add('district')
             ->add('address')
+            ->add('gallery', 'sonata_type_model_list', array('required' => false, 'label' => 'Галерея'), array('link_parameters' => array('context' => 'default')))
             ->add('facilities','sonata_type_model',array( 'by_reference' => false,
                 'multiple' => true,
                 'expanded' => true,));
@@ -33,5 +35,11 @@ class StadiumAdmin extends Admin
             ->add('facilities','sonata_type_model',array( 'by_reference' => false,
                 'multiple' => true,
                 'expanded' => true,));
+    }
+
+    protected function configureShowFields(ShowMapper $showMapper)
+    {
+        $showMapper->add('name')
+            ->add('address');
     }
 }
