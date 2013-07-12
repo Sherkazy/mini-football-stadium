@@ -189,6 +189,39 @@ class Stadium
     }
 
     /**
+     * Add facilities
+     *
+     * @param \Fairplay\MainBundle\Entity\Facility $facilities
+     * @return Stadium
+     */
+    public function addFacility(\Fairplay\MainBundle\Entity\Facility $facilities)
+    {
+        $this->facilities[] = $facilities;
+
+        return $this;
+    }
+
+    /**
+     * Remove facilities
+     *
+     * @param \Fairplay\MainBundle\Entity\Facility $facilities
+     */
+    public function removeFacility(\Fairplay\MainBundle\Entity\Facility $facilities)
+    {
+        $this->facilities->removeElement($facilities);
+    }
+
+    /**
+     * Get facilities
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFacilities()
+    {
+        return $this->facilities;
+    }
+
+    /**
      * Set amount
      *
      * @param integer $amount
@@ -232,29 +265,6 @@ class Stadium
     public function getScore()
     {
         return $this->score;
-    }
-
-    /**
-     * Add facilities
-     *
-     * @param \Fairplay\MainBundle\Entity\Facility $facilities
-     * @return Stadium
-     */
-    public function addFacilitie(\Fairplay\MainBundle\Entity\Facility $facilities)
-    {
-        $this->facilities[] = $facilities;
-    
-        return $this;
-    }
-
-    /**
-     * Remove facilities
-     *
-     * @param \Fairplay\MainBundle\Entity\Facility $facilities
-     */
-    public function removeFacilitie(\Fairplay\MainBundle\Entity\Facility $facilities)
-    {
-        $this->facilities->removeElement($facilities);
     }
 
     /**
