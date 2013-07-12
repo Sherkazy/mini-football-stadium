@@ -45,7 +45,7 @@ class Stadium
 
     /**
      * @var District
-     * @ORM\OneToOne(targetEntity="District")
+     * @ORM\ManyToOne(targetEntity="District")
      * @ORM\JoinColumn(name="district_id", referencedColumnName="id")
      */
     private $district;
@@ -78,6 +78,13 @@ class Stadium
      * @ORM\Column(name="score", type="decimal")
      */
     private $score;
+
+    /**
+     * @var Gallery
+     * @ORM\ManyToOne(targetEntity="\Application\Sonata\MediaBundle\Entity\Gallery")
+     * @ORM\JoinColumn(name="gallery_id", referencedColumnName="id")
+     */
+    private $gallery;
 
     /**
      * Get id
@@ -181,40 +188,6 @@ class Stadium
         return $this->district;
     }
 
-
-    /**
-     * Add facilities
-     *
-     * @param \Fairplay\MainBundle\Entity\Facility $facilities
-     * @return Stadium
-     */
-    public function addFacility(\Fairplay\MainBundle\Entity\Facility $facilities)
-    {
-        $this->facilities[] = $facilities;
-    
-        return $this;
-    }
-
-    /**
-     * Remove facilities
-     *
-     * @param \Fairplay\MainBundle\Entity\Facility $facilities
-     */
-    public function removeFacility(\Fairplay\MainBundle\Entity\Facility $facilities)
-    {
-        $this->facilities->removeElement($facilities);
-    }
-
-    /**
-     * Get facilities
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getFacilities()
-    {
-        return $this->facilities;
-    }
-
     /**
      * Set amount
      *
@@ -259,5 +232,51 @@ class Stadium
     public function getScore()
     {
         return $this->score;
+    }
+
+    /**
+     * Add facilities
+     *
+     * @param \Fairplay\MainBundle\Entity\Facility $facilities
+     * @return Stadium
+     */
+    public function addFacilitie(\Fairplay\MainBundle\Entity\Facility $facilities)
+    {
+        $this->facilities[] = $facilities;
+    
+        return $this;
+    }
+
+    /**
+     * Remove facilities
+     *
+     * @param \Fairplay\MainBundle\Entity\Facility $facilities
+     */
+    public function removeFacilitie(\Fairplay\MainBundle\Entity\Facility $facilities)
+    {
+        $this->facilities->removeElement($facilities);
+    }
+
+    /**
+     * Set gallery
+     *
+     * @param \Application\Sonata\MediaBundle\Entity\Gallery $gallery
+     * @return Stadium
+     */
+    public function setGallery(\Application\Sonata\MediaBundle\Entity\Gallery $gallery = null)
+    {
+        $this->gallery = $gallery;
+    
+        return $this;
+    }
+
+    /**
+     * Get gallery
+     *
+     * @return \Application\Sonata\MediaBundle\Entity\Gallery 
+     */
+    public function getGallery()
+    {
+        return $this->gallery;
     }
 }

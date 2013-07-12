@@ -2,6 +2,7 @@
 {% block content %}
     {% for stadium in stadiums %}
         <div class="stadium">
+            {% include 'FairplayMainBundle:Stadium:_gallery.html.twig' %}
             <div class="stadium_element">
             {{ stadium.name }}
                 <br/>
