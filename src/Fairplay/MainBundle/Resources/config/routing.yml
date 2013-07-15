@@ -5,3 +5,15 @@ fairplay_main_homepage:
 fairplay_main_search:
     pattern: /district/{id}/
     defaults: { _controller: FairplayMainBundle:Stadium:search }
+
+fairplay_ajax_rating:
+    pattern: /update/stadium/{id}/rating/{score}/
+    defaults: { _controller: FairplayMainBundle:Ajax:rating }
+    options:
+        expose: true
+
+fairplay_stadium_info:
+    pattern: /stadium/{id}/show
+    defaults: { _controller: FairplayMainBundle:Stadium:info }
+    requirements:
+      id: \d+

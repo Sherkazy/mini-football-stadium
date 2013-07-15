@@ -1,4 +1,6 @@
 $(window).load(function() {
+
+    //slider
     $('.slider').nivoSlider({
         effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
         slices: 15, // For slice animations
@@ -21,4 +23,38 @@ $(window).load(function() {
         lastSlide: function(){}, // Triggers when last slide is shown
         afterLoad: function(){} // Triggers when slider has loaded
     });
+
+    //Rating.
+    $('.star').raty({
+        score: function(){
+            return $(this).attr('data-score');
+        },
+        click: function(score) {
+            stadiumId=$(this).data('id');
+            updateRating(score,stadiumId);
+        },
+        half: true,
+        path: 'http://localhost/astroturf/web/public/js/img/',
+        halfShow: true
+    });
+
+    function updateRating(s,stadiumId){
+        var url = Routing.generate('fairplay_ajax_rating',{score: s, id: stadiumId});
+        $.ajax({
+            type: "POST",
+            url: url,
+            success:function(data){
+                updateRatingSuccess(data);
+            }
+
+        });
+    }
+
+    function updateRatingSuccess(data){
+        data.score = data.score.toFixed(2)
+       var rating = $('.rating'+data.id);
+        rating.data('score',data.score);
+        rating.find('.stadium_amount').html(data.amount);
+        rating.find('.stadium_score').html(data.score);
+    }
 });

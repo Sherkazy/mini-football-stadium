@@ -8,6 +8,7 @@
  */
 namespace Fairplay\MainBundle\Controller;
 
+use Behat\Mink\Exception\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -23,6 +24,16 @@ class StadiumController extends Controller
         $stadiums = $this->getDoctrine()->getRepository('FairplayMainBundle:Stadium')->findByDistrict($district_id);
 
         return $this->render('FairplayMainBundle:Stadium:stadiums.html.twig',array('stadiums'=>$stadiums));
+    }
+
+    public function infoAction($id)
+    {
+        $stadium = $this->getDoctrine()->getRepository('FairplayMainBundle:Stadium')->find($id);
+        if(!$stadium){
+            throw Exception('Стадион не найден');
+        }
+
+        return $this->render('FairplayMainBundle:Stadium:info.html.twig',array('stadium'=>$stadium));
     }
 
 }

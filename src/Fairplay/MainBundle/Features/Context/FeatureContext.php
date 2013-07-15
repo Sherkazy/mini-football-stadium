@@ -21,7 +21,7 @@ use Behat\Gherkin\Node\PyStringNode,
 /**
  * Feature context.
  */
-class FeatureContext extends BehatContext //MinkContext if you want to test web
+class FeatureContext extends MinkContext //MinkContext if you want to test web
                   implements KernelAwareInterface
 {
     private $kernel;
@@ -60,24 +60,4 @@ class FeatureContext extends BehatContext //MinkContext if you want to test web
 //        $container->get('some_service')->doSomethingWith($argument);
 //    }
 //
-    /**
-     * @Given /^I am on "([^"]*)"$/
-     */
-    public function iAmOn($arg1)
-    {
-        print "$arg1 is true";
-    }
-
-    /**
-     * @Then /^I should see "([^"]*)"$/
-     */
-    public function iShouldSee($arg1)
-    {
-        if($arg1=="saha")
-            print "YES";
-        else
-            throw new PendingException();
-
-    }
-
 }

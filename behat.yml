@@ -2,3 +2,8 @@ default:
     extensions:
         Behat\Symfony2Extension\Extension:
             bundle: FairplayMainBundle
+        Behat\MinkExtension\Extension:
+             base_url:  'http://localhost/astroturf/web/app_dev.php/'
+             goutte:    ~
+             selenium: ~
+             selenium2: ~

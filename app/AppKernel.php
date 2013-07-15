@@ -70,6 +70,8 @@ class AppKernel extends Kernel
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
             new Fairplay\MainBundle\FairplayMainBundle(),
+
+            new \FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

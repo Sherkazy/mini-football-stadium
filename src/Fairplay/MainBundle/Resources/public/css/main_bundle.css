@@ -40,8 +40,6 @@
 }
 .stadium_element{
     float: left;
-    height: 46px;
     margin: 2px;
-    overflow: hidden;
     width: 146px;
 }
