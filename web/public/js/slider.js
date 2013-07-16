@@ -57,4 +57,53 @@ $(window).load(function() {
         rating.find('.stadium_amount').html(data.amount);
         rating.find('.stadium_score').html(data.score);
     }
+
+
+
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+
+    var calendar = $('.calendar').fullCalendar({
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'agendaWeek,agendaDay'
+        },
+        selectable: true,
+        selectHelper: true,
+        select: function(start, end, allDay) {
+            var title = prompt('Название команды:');
+            if (title) {
+                calendar.fullCalendar('renderEvent',
+                    {
+                        title: title,
+                        start: start,
+                        end: end
+                    },
+                    true // make the event "stick"
+                );
+            }
+            calendar.fullCalendar('unselect');
+        },
+        editable: true,
+        height: 600,
+        minTime: '09:00am',
+        maxTime: '11:00pm',
+        dayNames:['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
+        monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+        buttonText:{
+            today:'Сегодня',
+            week: 'Неделя',
+            day: 'День'
+        },
+        defaultView: 'agendaWeek',
+        events: [
+            {
+                title: 'All Day Event',
+                start: new Date(y, m, 1)
+            },
+        ]
+    });
 });
