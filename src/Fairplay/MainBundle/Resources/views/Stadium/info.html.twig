@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+{% block content %}
+    <div class="stadium_left_info">
+        <h3>{{ stadium.name }}</h3>
+
+        <div class="dotted-line"></div>
+        <p>Рейтинг</p>
+       <p>{% include 'FairplayMainBundle:Stadium:_rating.html.twig' %}</p><div class="dotted-line"></div>
+       <p>{% include 'FairplayMainBundle:Stadium:_facility.html.twig' %}</p><div class="dotted-line"></div>
+        <p> Адрес: {{ stadium.address }}</p>
+    </div>
+    <div class="stadium_right_info">
+
+    </div>
+{% endblock %}

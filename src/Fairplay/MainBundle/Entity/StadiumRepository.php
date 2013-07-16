@@ -20,4 +20,17 @@ class StadiumRepository extends EntityRepository
             ->setParameter('id',$id);
         return $query->getResult();
     }
+
+    public function updateRating($id, $score)
+    {
+        $em=$this->getEntityManager();
+        $stadium = $em->getRepository('FairplayMainBundle:Stadium')->find($id);
+        $oldScore = $stadium->getScore();
+        $oldAmount = $stadium->getAmount();
+        $newScore = ($oldAmount*$oldScore+$score)/($oldAmount+1.0);
+        $stadium->setScore($newScore);
+        $stadium->setAmount($oldAmount+1.0);
+        $em->flush();
+        return array("score"=>$newScore, "amount"=>$oldAmount+1,'id'=>$id);
+    }
 }

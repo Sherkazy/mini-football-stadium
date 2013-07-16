@@ -75,7 +75,7 @@ class Stadium
     /**
      * @var float
      *
-     * @ORM\Column(name="score", type="decimal")
+     * @ORM\Column(name="score", type="decimal", precision=3, scale=1)
      */
     private $score;
 

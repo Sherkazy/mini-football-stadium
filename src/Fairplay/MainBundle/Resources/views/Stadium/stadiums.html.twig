@@ -4,21 +4,20 @@
         <div class="stadium">
             {% include 'FairplayMainBundle:Stadium:_gallery.html.twig' %}
             <div class="stadium_element">
-            {{ stadium.name }}
+            <a href="{{ path('fairplay_stadium_info',{id: stadium.id}) }}"> {{ stadium.name }}</a>
                 <br/>
             {{ stadium.address }}
             </div>
             <div class="stadium_element">
-                {{ stadium.amount}} oy ile, 5 üzerinden {{ stadium.score }} puan.
+            {% include 'FairplayMainBundle:Stadium:_rating.html.twig' %}
+
             </div>
             <div class="stadium_element">
                 {{ stadium.district.name }}
             </div>
             <div class="stadium_element">
-                {% for facility in stadium.facilities %}
-                    {{ facility.name }},
-                    {% endfor %}
-            </div>
+            {% include "FairplayMainBundle:Stadium:_facility.html.twig" %}
+        </div>
         </div>
     {% endfor %}
 {% endblock %}

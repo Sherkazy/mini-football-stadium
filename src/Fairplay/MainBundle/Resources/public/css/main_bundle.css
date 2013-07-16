@@ -40,8 +40,17 @@
 }
 .stadium_element{
     float: left;
-    height: 46px;
     margin: 2px;
-    overflow: hidden;
     width: 146px;
+}
+
+.stadium_left_info{
+    background-color: #EEEEEE;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    width: 300px;
+}
+
+.dotted-line{
+    border-bottom: 1px dotted #333333;
 }
