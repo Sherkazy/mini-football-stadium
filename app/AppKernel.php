@@ -72,6 +72,7 @@ class AppKernel extends Kernel
             new Fairplay\MainBundle\FairplayMainBundle(),
 
             new \FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
