@@ -19,7 +19,7 @@ var defaults = {
 
 	// display
 	defaultView: 'month',
-	aspectRatio: 1.35,
+	aspectRatio: 5,
 	header: {
 		left: 'title',
 		center: '',
@@ -373,6 +373,7 @@ function Calendar(element, options, eventSources) {
 	
 	
 	function renderView(inc) {
+
 		if (elementVisible()) {
 			ignoreWindowResize++; // because renderEvents might temporarily change the height before setSize is reached
 
@@ -2051,7 +2052,9 @@ function MonthView(element, calendar) {
 	
 }
 
+
 ;;
+
 
 fcViews.basicWeek = BasicWeekView;
 

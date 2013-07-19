@@ -1,23 +1,9 @@
 {% extends '::base.html.twig' %}
 {% block content %}
     {% for stadium in stadiums %}
-        <div class="stadium">
-            {% include 'FairplayMainBundle:Stadium:_gallery.html.twig' %}
-            <div class="stadium_element">
-            <a href="{{ path('fairplay_stadium_info',{id: stadium.id}) }}"> {{ stadium.name }}</a>
-                <br/>
-            {{ stadium.address }}
-            </div>
-            <div class="stadium_element">
-            {% include 'FairplayMainBundle:Stadium:_rating.html.twig' %}
-
-            </div>
-            <div class="stadium_element">
-                {{ stadium.district.name }}
-            </div>
-            <div class="stadium_element">
-            {% include "FairplayMainBundle:Stadium:_facility.html.twig" %}
-        </div>
-        </div>
+    {% include "FairplayMainBundle:Stadium:show.html.twig" %}
+    {% include "FairplayMainBundle:Stadium:show.html.twig" %}
+    {% include "FairplayMainBundle:Stadium:show.html.twig" %}
+    {% include "FairplayMainBundle:Stadium:show.html.twig" %}
     {% endfor %}
 {% endblock %}

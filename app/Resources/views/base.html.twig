@@ -14,7 +14,6 @@
 
     {%  include '_header.html.twig' %}
         {% block search %}
-    <div class="search_background">
         <div class="search_bar">
         <div class="search_info">
                 Artık saha saha dolaşmana gerek yok.
@@ -23,13 +22,15 @@
             </div>
             {{ render(controller('FairplayMainBundle:Main:searchBar')) }}
         </div>
-    </div>
         {% endblock %}
     {% block body %}{% endblock %}
     <div class="content">
         {% block content %}
         {% endblock %}
     </div>
+    <p id="back-top">
+        <a href="#top"><span>Вверх</span></a>
+    </p>
     {#{% include'_footer.html.twig' %}#}
 
         {% block javascripts %}

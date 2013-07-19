@@ -1,0 +1,13 @@
+<div class="stadium">
+    <div class="stadium_top_info">
+        <a href="{{ path('fairplay_stadium_info',{id: stadium.id}) }}"> {{ stadium.name }}</a>
+        <span class="stadium_address"> {{ stadium.address }}</span>
+    </div>
+    {% include 'FairplayMainBundle:Stadium:_gallery.html.twig' %}
+    <div class="stadium_element">
+        {% include 'FairplayMainBundle:Stadium:_rating.html.twig' %}
+    </div>
+        <div class="stadium_element">
+        {% include "FairplayMainBundle:Stadium:_facility.html.twig" %}
+    </div>
+</div>

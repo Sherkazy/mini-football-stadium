@@ -13,16 +13,14 @@
     <script type="text/javascript" src="{{ asset('public/js/fullcalendar/calendarscripts.js') }}"></script>
 {% endblock %}
 {% block content %}
-    <div class="stadium_left_info">
+    <div class="stadium_info">
         <h3>{{ stadium.name }}</h3>
 
-        <div class="dotted-line"></div>
         <p>Рейтинг</p>
-       <p>{% include 'FairplayMainBundle:Stadium:_rating.html.twig' %}</p><div class="dotted-line"></div>
-       <p>{% include 'FairplayMainBundle:Stadium:_facility.html.twig' %}</p><div class="dotted-line"></div>
+       <p>{% include 'FairplayMainBundle:Stadium:_rating.html.twig' %}
+       <p>{% include 'FairplayMainBundle:Stadium:_facility.html.twig' %}
         <p> Адрес: {{ stadium.address }}</p>
     </div>
-    <div class="stadium_right_info">
         <div class="calendar"></div>
-    </div>
+        {#{% include 'FairplayMainBundle:Stadium:_stadium_gallery.html.twig' %}#}
 {% endblock %}

@@ -2,6 +2,10 @@ body{
     margin:0;
     padding: 0;
 }
+html{
+    background: url('../img/background/wallpaper.jpg') no-repeat fixed 50% 0 #000000 !important ;
+    /*background-image: url("../../bundles/fairplaymain/img/football_field.jpg");*/
+}
 /*Header*/
 #top_menu{
     height: 68px;
@@ -27,13 +31,15 @@ body{
 }
 .navigation_element > a{
     text-decoration: none;
-    color: #C6C6C6;
-    padding: 0 10px;
-
+    color: #ffffff;
+    padding: 10px;
 }
 .navigation_element > a:hover, .navigation_element> a:active{
-    color: #ffffff;
     background-color: #000000;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    margin-right: 5px;
+
 }
 
 /*Footer*/
@@ -62,4 +68,52 @@ body{
 .content{
     margin: 10px auto;
     width: 960px;
+}
+
+
+#back-top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px
+}
+
+#back-top a {
+    width: 108px;
+    display: block;
+    text-align: center;
+    font: 11px/100% Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #bbb;
+
+    /* transition */
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+#back-top a:hover {
+    color: #000;
+}
+
+/* arrow icon (span tag) */
+#back-top span {
+    width: 108px;
+    height: 108px;
+    display: block;
+    margin-bottom: 7px;
+    background: #ddd url(../img/up-arrow.png) no-repeat center center;
+    box-shadow: 0 0 10px rgb(222, 222, 222);
+
+    /* rounded corners */
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    /* transition */
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+#back-top a:hover span {
+    background-color: #777;
 }

@@ -16,19 +16,25 @@ $(window).load(function(){
         events: {
             url: url
         },
-        select: function(start,end,allDay, jsEvent, view){
-            var eventUrl = Routing.generate('fairplay_ajax_event_select',{'id': parseInt(id)});
-            var form = $('<form action="' + eventUrl + '" method="post">' +
-                '<input type="text" name="start" value="' + start + '" />' +
-                '<input type="text" name="end" value="' + end + '" />' +
-                '</form>');
-            $('body').append(form);
-            $(form).submit();
+        dayClick:function(date,allDay, jsEvent, view){
+         /* alert('asdf');*/
         },
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'agendaWeek,agendaDay'
+        select: function(start,end,allDay, jsEvent, view){
+
+            var check = $.fullCalendar.formatDate(start,'yyyy-MM-dd');
+            var today = $.fullCalendar.formatDate(new Date(),'yyyy-MM-dd');
+
+            if(check>=today){
+                if(confirm("Забронировать?")){
+                    var eventUrl = Routing.generate('fairplay_ajax_event_select',{'id': parseInt(id)});
+                    var form = $('<form action="' + eventUrl + '" method="post">' +
+                        '<input type="text" name="start" value="' + start + '" />' +
+                        '<input type="text" name="end" value="' + end + '" />' +
+                        '</form>');
+                    $('body').append(form);
+                    $(form).submit();
+                }
+            }
         },
         selectable: true,
         selectHelper: true,
