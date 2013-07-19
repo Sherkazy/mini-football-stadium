@@ -20,8 +20,13 @@ class StadiumController extends Controller
         $district_id = $request->request->get('district');
 
         /*var_dump($request->request->get('district'));die($request->request->get('district'));*/
+        $repository = $this->getDoctrine()->getRepository('FairplayMainBundle:Stadium');
+        if($district_id=="all"){
+            $stadiums = $repository->findAll();
+        }else{
 
-        $stadiums = $this->getDoctrine()->getRepository('FairplayMainBundle:Stadium')->findByDistrict($district_id);
+            $stadiums = $repository->findByDistrict($district_id);
+        }
 
         return $this->render('FairplayMainBundle:Stadium:stadiums.html.twig',array('stadiums'=>$stadiums));
     }

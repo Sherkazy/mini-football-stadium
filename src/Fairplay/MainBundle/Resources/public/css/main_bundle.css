@@ -3,16 +3,6 @@
     width: 960px;
     padding: 20px;
 }
-.search_background{
-    background-image: url("../img/football_field.jpg");
-}
-.submit_button{
-    border: 2px solid #00ff00;
-    border-radius: 3px 3px 3px 3px;
-    height: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 .search_info{
     color: white;
     font-size: 24px;
@@ -20,37 +10,67 @@
     margin:10px 10px 10px 0;
 }
 .search_select{
-    width: 150px;
-    margin:0;
-    padding: 0;
-    height: 25px;
-    border: 2px solid #00ff00;
+    border: 2px solid #EEEEEE;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 20px;
+    height: 40px;
+    margin: 0;
+    padding: 5px;
+    width: 430px;
 }
 .submit_button:hover{
     background-color: #ffffff;
 }
-
+.submit_button{
+    border: 2px solid #EEEEEE;
+    background-color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    height: 40px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 125px;
+    cursor: pointer;
+}
 .stadium{
-    width: 300px;
-    height: 150px;
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #DEDEDE;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 110px white;
     float: left;
-    margin: 10px;
-    background-image: url('../img/stadium_element.jpg');
+    list-style: none outside none;
+    margin: 0 38px 25px 0;
+    padding: 5px;
+    width: 420px;
 
 }
 .stadium_element{
     float: left;
-    margin: 2px;
-    width: 146px;
+    padding: 2px;
+    width: 200px;
 }
 
-.stadium_left_info{
-    background-color: #EEEEEE;
-    margin: 10px 10px 10px 0;
-    padding: 10px;
-    width: 300px;
+.stadium_info{
+    background-color: #FFFFFF;
+    margin: 10px 0;
+    padding: 10px 10px;
 }
-
+.stadium_top_info > a {
+    color: #F1B126;
+    text-decoration: none;
+}
 .dotted-line{
     border-bottom: 1px dotted #333333;
+}
+
+.stadium_address{
+    float: right;
+}
+.stadium_top_info{
+    margin: 3px;
+    font-size: 22px;
+}
+.calendar{
+    background-color: #ffffff;
+    padding: 30px;
 }

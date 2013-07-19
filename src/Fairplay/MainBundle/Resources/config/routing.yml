@@ -13,7 +13,23 @@ fairplay_ajax_rating:
         expose: true
 
 fairplay_stadium_info:
-    pattern: /stadium/{id}/show
+    pattern: /stadium/{id}/
     defaults: { _controller: FairplayMainBundle:Stadium:info }
     requirements:
       id: \d+
+
+fairplay_calendar_event:
+      pattern: /stadium/{id}/event/
+      defaults: { _controller: FairplayMainBundle:Ajax:loadEvent }
+      requirements:
+        id: \d+
+      options:
+          expose: true
+
+fairplay_ajax_event_select:
+      pattern: /stadium/{id}/event/create/
+      defaults: { _controller: FairplayMainBundle:Event:createEvent }
+      requirements:
+        id: \d+
+      options:
+          expose: true

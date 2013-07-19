@@ -61,6 +61,7 @@ class Stadium
 
     public function __construct() {
         $this->facilities = new ArrayCollection();
+        $this->events = new ArrayCollection();
         $this->setAmount(0);
         $this->setScore(0);
     }
@@ -85,6 +86,11 @@ class Stadium
      * @ORM\JoinColumn(name="gallery_id", referencedColumnName="id")
      */
     private $gallery;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Event", mappedBy="stadium")
+     */
+    private $events;
 
     /**
      * Get id
@@ -288,5 +294,61 @@ class Stadium
     public function getGallery()
     {
         return $this->gallery;
+    }
+
+    /**
+     * Add facilities
+     *
+     * @param \Fairplay\MainBundle\Entity\Facility $facilities
+     * @return Stadium
+     */
+    public function addFacilitie(\Fairplay\MainBundle\Entity\Facility $facilities)
+    {
+        $this->facilities[] = $facilities;
+    
+        return $this;
+    }
+
+    /**
+     * Remove facilities
+     *
+     * @param \Fairplay\MainBundle\Entity\Facility $facilities
+     */
+    public function removeFacilitie(\Fairplay\MainBundle\Entity\Facility $facilities)
+    {
+        $this->facilities->removeElement($facilities);
+    }
+
+    /**
+     * Add events
+     *
+     * @param \Fairplay\MainBundle\Entity\Event $events
+     * @return Stadium
+     */
+    public function addEvent(\Fairplay\MainBundle\Entity\Event $events)
+    {
+        $this->events[] = $events;
+    
+        return $this;
+    }
+
+    /**
+     * Remove events
+     *
+     * @param \Fairplay\MainBundle\Entity\Event $events
+     */
+    public function removeEvent(\Fairplay\MainBundle\Entity\Event $events)
+    {
+        $this->events->removeElement($events);
+    }
+
+    /**
+     * Get events
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEvents()
+    {
+        return $this->events;
     }
 }

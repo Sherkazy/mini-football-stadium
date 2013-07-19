@@ -13,24 +13,25 @@
     <body>
 
     {%  include '_header.html.twig' %}
-    <div class="search_background">
-        <div class="search_bar">
         {% block search %}
-            <div class="search_info">
+        <div class="search_bar">
+        <div class="search_info">
                 Artık saha saha dolaşmana gerek yok.
                 İster telefonundan, ister bilgisayarından,
                 Sahasepeti.com 'a gir, sahayı seç, kaporanı öde, sahayı kapat!
             </div>
             {{ render(controller('FairplayMainBundle:Main:searchBar')) }}
-        {% endblock %}
         </div>
-    </div>
+        {% endblock %}
     {% block body %}{% endblock %}
     <div class="content">
         {% block content %}
         {% endblock %}
     </div>
-    {% include'_footer.html.twig' %}
+    <p id="back-top">
+        <a href="#top"><span>Вверх</span></a>
+    </p>
+    {#{% include'_footer.html.twig' %}#}
 
         {% block javascripts %}
             <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>

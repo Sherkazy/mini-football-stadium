@@ -1,15 +1,26 @@
 {% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('public/css/fullcalendar/fullcalendar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/css/fullcalendar/fullcalendar.print.css') }}" media="print" />
+  {% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('public/js/fullcalendar/fullcalendar.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/js/fullcalendar/gcal.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/sonatajquery/jquery-ui-1.8.23.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/js/fullcalendar/calendarscripts.js') }}"></script>
+{% endblock %}
 {% block content %}
-    <div class="stadium_left_info">
+    <div class="stadium_info">
         <h3>{{ stadium.name }}</h3>
 
-        <div class="dotted-line"></div>
         <p>Рейтинг</p>
-       <p>{% include 'FairplayMainBundle:Stadium:_rating.html.twig' %}</p><div class="dotted-line"></div>
-       <p>{% include 'FairplayMainBundle:Stadium:_facility.html.twig' %}</p><div class="dotted-line"></div>
+       <p>{% include 'FairplayMainBundle:Stadium:_rating.html.twig' %}
+       <p>{% include 'FairplayMainBundle:Stadium:_facility.html.twig' %}
         <p> Адрес: {{ stadium.address }}</p>
     </div>
-    <div class="stadium_right_info">
-
-    </div>
+        <div class="calendar"></div>
+        {#{% include 'FairplayMainBundle:Stadium:_stadium_gallery.html.twig' %}#}
 {% endblock %}

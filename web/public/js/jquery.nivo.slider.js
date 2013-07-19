@@ -18,7 +18,7 @@
             currentImage: '',
             totalSlides: 0,
             running: false,
-            paused: false,
+            paused: true,
             stop: false,
             controlNavEl: false
         };
@@ -88,7 +88,7 @@
         });
 
         //Create caption
-        slider.append($('<div class="nivo-caption"></div>'));
+        /*slider.append($('<div class="nivo-caption"></div>'));*/
         
         // Process caption function
         var processCaption = function(settings){
@@ -642,8 +642,8 @@
         animSpeed: 500,
         pauseTime: 3000,
         startSlide: 0,
-        directionNav: true,
-        controlNav: true,
+        directionNav: false,
+        controlNav: false,
         controlNavThumbs: false,
         pauseOnHover: true,
         manualAdvance: false,
