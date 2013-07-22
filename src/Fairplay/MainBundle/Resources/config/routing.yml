@@ -27,7 +27,7 @@ fairplay_calendar_event:
           expose: true
 
 fairplay_ajax_event_select:
-      pattern: /stadium/{id}/event/create/
+      pattern: /reserve/stadium/{id}/event/create/
       defaults: { _controller: FairplayMainBundle:Event:createEvent }
       requirements:
         id: \d+

@@ -3,8 +3,45 @@
         <div class="top_navigation">
             <ul>
                 <li class="navigation_element"><a href="{{ path('fairplay_main_homepage') }}">Главная</a></li>
-                <li class="navigation_element"><a href="#">Поля</a> </li>
-                <li class="navigation_element"><a href="#">Помощь</a> </li>
+                <li class="navigation_element"><a href="#">Поля</a></li>
+                <li class="navigation_element"><a href="#">Помощь</a></li>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li class="navigation_element">
+                    <div class="dropdown">
+                        <a class="account"><span>{{ app.user.username }}</span></a>
+
+                        <div class="submenu" style="display: none; ">
+
+                            <ul class="root">
+                                <li>
+                                    <a href="{#{{ path('fos_user_profile_show') }}#}">Профиль</a>
+                                </li>
+                                <li>
+
+                                    <a href="#settings">Settings</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="#feedback">Send Feedback</a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ path('fos_user_security_logout') }}">
+                                            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                {% else %}
+                    <li class="navigation_element">
+                        <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a></li>
+                    <li class="navigation_element">
+                        <a href="{{ path('fos_user_registration_register') }}">Регистрация</a></li>
+                {% endif %}
+
             </ul>
         </div>
     </div>

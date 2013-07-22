@@ -21,6 +21,8 @@
        <p>{% include 'FairplayMainBundle:Stadium:_facility.html.twig' %}
         <p> Адрес: {{ stadium.address }}</p>
     </div>
-        <div class="calendar"></div>
+        <div class="calendar">
+            <img src="{{ asset('public/img/loading-32x32.gif') }}" class="loading-img"/>
+        </div>
         {#{% include 'FairplayMainBundle:Stadium:_stadium_gallery.html.twig' %}#}
 {% endblock %}
