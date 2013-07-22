@@ -1,0 +1,49 @@
+.registration_input input{
+    border: 1px solid #0E4984;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0;
+    padding-left: 10px;
+    width: 300px;
+}
+
+.user{
+    background: none repeat scroll 0 0 white;
+    border: 2px solid #EEEEEE;
+    border-radius: 10px 10px 10px 10px;
+    display: inline-block;
+    left: 36%;
+    padding: 25px;
+    position: absolute;
+    top: 28%;
+}
+.registration_label{
+    display: inline-block;
+    margin: 10px 0 0 0;
+}
+.registration_submit input{
+    background: -moz-linear-gradient(center top , #4796E6, #3773AF) repeat scroll 0 0 #2D5F9C;
+    border: 2px solid white;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    height: 40px;
+    width: 315px;
+    color: #ffffff;
+    margin: 0;
+}
+.registration_remember_me input{
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -o-appearance:none;
+    width: 20px;
+    height: 20px;
+}
+.registration_remember_me{
+    margin: 10px 0;
+}
+.help-inline{
+    color: red;
+    display: inline-block;
+}

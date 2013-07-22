@@ -3,18 +3,17 @@ body{
     padding: 0;
 }
 html{
-    background: url('../img/background/wallpaper.jpg') no-repeat fixed 50% 0 #000000 !important ;
-    /*background-image: url("../../bundles/fairplaymain/img/football_field.jpg");*/
+    background-color: #205081;
 }
 /*Header*/
 #top_menu{
-    height: 68px;
-    background-color: #333333;
+    height: 50px;
+    background-color: rgb(22, 55, 89);
+    border-bottom: 2px solid rgb(238, 238, 238);
 }
 .top_menu_content{
     width: 960px;
     margin: 0 auto;
-    height: 100%;
     color: #ffffff;
 }
 .top_navigation{
@@ -22,7 +21,7 @@ html{
 }
 .top_navigation > ul{
     list-style-type: none;
-    padding: 5px 0 0;
+    padding: 0;
 }
 .navigation_element{
     text-decoration: none;
@@ -35,7 +34,6 @@ html{
     padding: 10px;
 }
 .navigation_element > a:hover, .navigation_element> a:active{
-    background-color: #000000;
     border-radius: 5px 5px 5px 5px;
     color: #FFFFFF;
     margin-right: 5px;
@@ -73,8 +71,8 @@ html{
 
 #back-top {
     position: fixed;
-    bottom: 30px;
-    right: 20px
+    bottom: 3%;
+    right: 3%
 }
 
 #back-top a {
@@ -102,7 +100,7 @@ html{
     display: block;
     margin-bottom: 7px;
     background: #ddd url(../img/up-arrow.png) no-repeat center center;
-    box-shadow: 0 0 10px rgb(222, 222, 222);
+    box-shadow: 0 0 10px #EEEEEE;
 
     /* rounded corners */
     -webkit-border-radius: 15px;
@@ -115,5 +113,74 @@ html{
     transition: 1s;
 }
 #back-top a:hover span {
-    background-color: #777;
+    background-color: #385673;
+}
+
+
+
+div.dropdown {
+    color: #555;
+    margin: 3px -22px 0 0;
+    width: 143px;
+    position: relative;
+    height: 17px;
+    text-align:left;
+}
+div.submenu
+{
+    background: #fff;
+    position: absolute;
+    top: -12px;
+    left: -20px;
+    z-index: 100;
+    width: 135px;
+    display: none;
+    margin-left: 10px;
+    padding: 40px 0 5px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.dropdown  li a {
+
+    color: #555555;
+    display: block;
+    font-family: arial;
+    font-weight: bold;
+    padding: 6px 15px;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+.dropdown li a:hover{
+    background:#155FB0;
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+a.account {
+    font-size: 16px;
+    line-height: 16px;
+    color: #555;
+    position: absolute;
+    z-index: 110;
+    display: block;
+    padding: 11px 0 0 20px;
+    height: 28px;
+    width: 121px;
+    margin: -11px 0 0 -10px;
+    text-decoration: none;
+    background: url(../img/arrow.png) 116px 17px no-repeat;
+    cursor:pointer;
+}
+.root
+{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    font-size: 11px;
+    padding: 11px 0 0 0px;
+    border-top:1px solid #dedede;
+
+
 }

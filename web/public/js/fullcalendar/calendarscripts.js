@@ -5,6 +5,13 @@
  * Time: 10:56
  * To change this template use File | Settings | File Templates.
  */
+
+function covertToUnixTime(yourDate) {
+    return new Date(yourDate.substring(4, 8) + '/' +
+        yourDate.substring(2, 4) + '/' +
+        yourDate.substring(0, 2)).getTime() / 1000;
+}
+
 $(window).load(function(){
     var date = new Date();
     var d = date.getDate();
@@ -34,6 +41,14 @@ $(window).load(function(){
                     $('body').append(form);
                     $(form).submit();
                 }
+            }
+        },
+        loading: function(isLoading, view){
+            if(isLoading){
+                $('.loading-img').show();
+            }
+            else{
+                $('.loading-img').hide();
             }
         },
         selectable: true,

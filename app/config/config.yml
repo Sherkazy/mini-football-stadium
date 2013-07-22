@@ -85,3 +85,25 @@ swiftmailer:
 
 jms_security_extra:
     secure_all_services: false
+
+services:
+    fairplay_user.registration.form.type:
+        class: Application\Sonata\UserBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: fairplay_user_registration }
+
+    fairplay_user.profile.form.type:
+        class: Application\Sonata\UserBundle\Form\Type\ProfileFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: fairplay_user_profile }
+
+
+fos_user:
+    registration:
+        form:
+            type: fairplay_user_registration
+    profile:
+        form:
+            type: fairplay_user_profile

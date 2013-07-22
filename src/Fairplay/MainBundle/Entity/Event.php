@@ -54,14 +54,14 @@ class Event
     /**
      * @var string
      *
-     * @ORM\Column(name="url", type="string", length=255)
+     * @ORM\Column(name="url", type="string", length=255, nullable=true)
      */
     private $url;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="className", type="string", length=255)
+     * @ORM\Column(name="className", type="string", length=255, nullable=true)
      * @SerializedName("className")
      */
     private $className;
@@ -76,7 +76,7 @@ class Event
     /**
      * @var string
      *
-     * @ORM\Column(name="backgroundColor", type="string", length=255)
+     * @ORM\Column(name="backgroundColor", type="string", length=255, nullable=true)
      * @SerializedName("backgroundColor")
      */
     private $backgroundColor;
@@ -84,7 +84,7 @@ class Event
     /**
      * @var string
      *
-     * @ORM\Column(name="borderColor", type="string", length=20)
+     * @ORM\Column(name="borderColor", type="string", length=20, nullable=true)
      * @SerializedName("borderColor")
      */
     private $borderColor;
@@ -92,7 +92,7 @@ class Event
     /**
      * @var string
      *
-     * @ORM\Column(name="textColor", type="string", length=20)
+     * @ORM\Column(name="textColor", type="string", length=20, nullable=true)
      * @SerializedName("textColor")
      */
     private $textColor;
@@ -103,6 +103,13 @@ class Event
      * @ORM\JoinColumn(name="stadium_id", referencedColumnName="id")
      */
     protected $stadium;
+
+    /**
+     * @var FOSUser
+     * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User", inversedBy="events")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    protected $user;
     /**
      * Get id
      *
@@ -364,5 +371,28 @@ class Event
     public function getStadium()
     {
         return $this->stadium;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \Application\Sonata\UserBundle\User $user
+     * @return Event
+     */
+    public function setUser(\Application\Sonata\UserBundle\User $user = null)
+    {
+        $this->user = $user;
+    
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Application\Sonata\UserBundle\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }
