@@ -24,5 +24,5 @@
         <div class="calendar">
             <img src="{{ asset('public/img/loading-32x32.gif') }}" class="loading-img"/>
         </div>
-        {#{% include 'FairplayMainBundle:Stadium:_stadium_gallery.html.twig' %}#}
+        {% render(controller('FairplayMainBundle:Map:show',{ 'id': stadium.id })) %}
 {% endblock %}
