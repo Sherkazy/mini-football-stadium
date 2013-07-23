@@ -1,6 +1,8 @@
-body{
-    margin:0;
-    padding: 0;
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
 }
 html{
     background-color: #205081;
@@ -15,6 +17,7 @@ html{
     width: 960px;
     margin: 0 auto;
     color: #ffffff;
+    padding: 10px 0;
 }
 .top_navigation{
     float: right;
@@ -42,11 +45,6 @@ html{
 
 /*Footer*/
 .footer{
-    height: 200px;
-    bottom: 0;
-    left:0;
-    position: fixed;
-    width: 100%;
     background-color: #333333;
     border-top: 3px #666666 solid;
 }
@@ -66,9 +64,21 @@ html{
 .content{
     margin: 10px auto;
     width: 960px;
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -142px;
+
 }
 
+.content:after {
+    content: "";
+    display: block;
+}
 
+.footer, .content:after {
+    /* .push must be the same height as footer */
+    height: 142px;
+}
 #back-top {
     position: fixed;
     bottom: 3%;
