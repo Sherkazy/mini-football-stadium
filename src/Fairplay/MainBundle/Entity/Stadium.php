@@ -93,6 +93,11 @@ class Stadium
     private $events;
 
     /**
+     * @ORM\OneToOne(targetEntity="Marker", mappedBy="stadium")
+     */
+    private $marker;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -350,5 +355,28 @@ class Stadium
     public function getEvents()
     {
         return $this->events;
+    }
+
+    /**
+     * Set marker
+     *
+     * @param \Fairplay\MainBundle\Entity\Marker $marker
+     * @return Stadium
+     */
+    public function setMarker(\Fairplay\MainBundle\Entity\Marker $marker = null)
+    {
+        $this->marker = $marker;
+    
+        return $this;
+    }
+
+    /**
+     * Get marker
+     *
+     * @return \Fairplay\MainBundle\Entity\Marker 
+     */
+    public function getMarker()
+    {
+        return $this->marker;
     }
 }
