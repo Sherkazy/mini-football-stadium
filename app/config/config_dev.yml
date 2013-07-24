@@ -24,3 +24,6 @@ assetic:
 
 bazinga_faker:
     orm: doctrine
+
+ewz_recaptcha:
+    enabled:      false

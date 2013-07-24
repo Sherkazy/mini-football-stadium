@@ -67,7 +67,8 @@
         "jms/serializer-bundle": "dev-master",
         "egeloen/google-map-bundle": "*",
         "willdurand/geocoder": "*",
-        "kriswallsmith/buzz": "*"
+        "kriswallsmith/buzz": "*",
+        "excelwebzone/recaptcha-bundle": "dev-master"
     },
 
     "require-dev": {

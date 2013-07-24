@@ -32,7 +32,7 @@ security:
             form_login:
                 provider:       fos_userbundle
                 login_path:     /admin/login
-                use_forward:    false
+                use_forward:    true
                 check_path:     /admin/login_check
                 failure_path:   null
             logout:
@@ -47,7 +47,7 @@ security:
             form_login:
                 provider:       fos_userbundle
                 login_path:     /login
-                use_forward:    false
+                use_forward:    true
                 check_path:     /login_check
                 failure_path:   null
             logout:       true
