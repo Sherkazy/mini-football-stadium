@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "bd91f76bf37dba992859dbdf2a399506",
+    "hash": "3c6c4b3f0e2781d60261e4321c9b3c5c",
     "packages": [
         {
             "name": "alexandresalome/php-selenium",
@@ -1385,6 +1385,48 @@
                 "google map"
             ],
             "time": "2013-06-07 20:19:56"
+        },
+        {
+            "name": "excelwebzone/recaptcha-bundle",
+            "version": "dev-master",
+            "target-dir": "EWZ/Bundle/RecaptchaBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/excelwebzone/EWZRecaptchaBundle.git",
+                "reference": "6b48811140b7ea59c42065c099282c5afbf2b927"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/excelwebzone/EWZRecaptchaBundle/zipball/6b48811140b7ea59c42065c099282c5afbf2b927",
+                "reference": "6b48811140b7ea59c42065c099282c5afbf2b927",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": "2.*"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "EWZ\\Bundle\\RecaptchaBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael H. Arieli",
+                    "email": "excelwebzone@gmail.com",
+                    "homepage": "http://excelwebzone.com/"
+                }
+            ],
+            "description": "This bundle provides easy reCAPTCHA form field integration",
+            "homepage": "https://github.com/excelwebzone/EWZRecaptchaBundle",
+            "keywords": [
+                "recaptcha"
+            ],
+            "time": "2013-06-27 14:22:16"
         },
         {
             "name": "fabpot/goutte",
@@ -5186,7 +5228,8 @@
         "simplethings/entity-audit-bundle": 20,
         "willdurand/faker-bundle": 20,
         "behat/behat": 0,
-        "jms/serializer-bundle": 20
+        "jms/serializer-bundle": 20,
+        "excelwebzone/recaptcha-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

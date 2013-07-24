@@ -1,12 +1,7 @@
 Feature: Homepage
 
 
-  Scenario: Check homepage route status code
+  Scenario: Check Home page link
     When I go to "/"
-    Then the response status code should be 200
-
-  @javascript
-  Scenario: Search stadiums by district
-    When I go to "/"
-    And I select "Tokmok" from "district"
-    Then I should see "Barcelona"
+    Then I follow "Главная"
+    Then I should be on "/"

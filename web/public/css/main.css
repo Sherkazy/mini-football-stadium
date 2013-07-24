@@ -1,8 +1,6 @@
-* {
-    margin: 0;
-}
 html, body {
     height: 100%;
+    margin: 0;
 }
 html{
     background-color: #205081;
@@ -17,7 +15,6 @@ html{
     width: 960px;
     margin: 0 auto;
     color: #ffffff;
-    padding: 10px 0;
 }
 .top_navigation{
     float: right;
@@ -195,5 +192,5 @@ a.account {
 
 }
 #map_canvas{
-    margin-top: 10px;
+    margin: 10px 0;
 }

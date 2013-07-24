@@ -8,7 +8,7 @@
                     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
 
                     <div class="registration_label">
-                        <label for="username" >{{ 'security.login.username'|trans({}, 'FOSUserBundle') }} или e-mail:</label>
+                        <label for="username" >{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}:</label>
                     </div>
                     <div class="registration_input">
                         <input type="text" id="username" name="_username" required="required"/>
@@ -31,6 +31,6 @@
                     </div>
 
                 </form>
-    <a href="{{ path('fos_user_resetting_request') }}"> Забыли пароль</a>
+    <a href="{{ path('fos_user_resetting_request') }}"> Забыли пароль</a> или
     <a href="{{ path('fos_user_registration_register') }}"> Зарегистрироваться</a>
 {% endblock fos_user_content %}

@@ -107,3 +107,9 @@ fos_user:
     profile:
         form:
             type: fairplay_user_profile
+
+ewz_recaptcha:
+    public_key:   6LdmLOUSAAAAAIUMM5ol5xCF4pLe4CezxqFleDim
+    private_key:  6LdmLOUSAAAAAFTENGRT3CZUejBCICdm5XuVlTN_
+    secure:       false
+    locale_key:   kernel.default_locale
