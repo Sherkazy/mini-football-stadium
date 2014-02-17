@@ -66,7 +66,7 @@
         "behat/mink-selenium-driver": "*",
         "jms/serializer-bundle": "dev-master",
         "egeloen/google-map-bundle": "*",
-        "willdurand/geocoder": "*",
+        "willdurand/geocoder": "@stable",
         "kriswallsmith/buzz": "*",
         "excelwebzone/recaptcha-bundle": "dev-master"
     },
