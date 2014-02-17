@@ -93,7 +93,7 @@ class Stadium
     private $events;
 
     /**
-     * @ORM\OneToOne(targetEntity="Marker", mappedBy="stadium")
+     * @ORM\OneToOne(targetEntity="Marker", mappedBy="stadium", cascade={"all"})
      */
     private $marker;
 

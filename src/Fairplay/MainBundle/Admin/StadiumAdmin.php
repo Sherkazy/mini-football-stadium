@@ -20,6 +20,7 @@ class StadiumAdmin extends Admin
             ->add('description')
             ->add('district')
             ->add('address')
+            ->add('marker','sonata_type_admin')
             ->add('gallery', 'sonata_type_model_list', array('required' => false, 'label' => 'Галерея'), array('link_parameters' => array('context' => 'default')))
             ->add('facilities','sonata_type_model',array( 'by_reference' => false,
                 'multiple' => true,

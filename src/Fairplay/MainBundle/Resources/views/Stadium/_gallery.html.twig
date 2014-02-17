@@ -1,9 +1,13 @@
 <div id="wrapper">
     <div class="slider-wrapper theme-default">
         <div class="slider" class="nivoSlider">
+            {% if stadium.gallery is not null %}
             {% for galleryHasMedia in stadium.gallery.GalleryHasMedias %}
                 {% thumbnail galleryHasMedia.media, 'default_big' %}
             {% endfor %}
+            {% else %}
+                <img src="{{ asset('public/img/no-image.jpg') }}"/>
+            {% endif %}
         </div>
     </div>
 

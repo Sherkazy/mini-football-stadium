@@ -29,6 +29,15 @@
                 <argument>FairplayMainBundle</argument>
             </call>
         </service>
+        <service id="sonata.admin.marker" class="Fairplay\MainBundle\Admin\MarkerAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Стадион" label="Маркер" audit="false"/>
+            <argument/>
+            <argument>Fairplay\MainBundle\Entity\Marker</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+            <call method="setTranslationDomain">
+                <argument>FairplayMainBundle</argument>
+            </call>
+        </service>
 
     </services>
            </container>
